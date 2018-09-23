@@ -1,0 +1,49 @@
+{
+  "kebabList": [
+    {
+      "id": 1,
+      "name": "Chicken",
+      "price": 35
+    },
+    {
+      "id": 2,
+      "name": "Veal",
+      "price": 45
+    },
+    {
+      "id": 3,
+      "name": "Crab",
+      "price": 50
+    },
+    {
+      "id": 4,
+      "name": "Shrimp",
+      "price": 55
+    },
+    {
+      "name": "fgfg",
+      "price": "22",
+      "id": 5
+    },
+    {
+      "name": "dfd",
+      "price": "33",
+      "id": 6
+    },
+    {
+      "name": "bbbbb",
+      "price": "33333",
+      "id": 7
+    },
+    {
+      "name": "dfgd",
+      "price": "33",
+      "id": 8
+    },
+    {
+      "name": "fgdf",
+      "price": "33",
+      "id": 9
+    }
+  ]
+}

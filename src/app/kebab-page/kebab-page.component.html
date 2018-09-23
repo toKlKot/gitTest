@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Kebab page</h2>
+  <input type="text" class="form-control" [(ngModel)]="kebabName" >
+  <input type="text" class="form-control" [(ngModel)]="kebabPrice" >
+  <button class="btn btn-success" (click)="addKebab()">Add kebab</button>
+<hr>
+  <div class="row">
+    <div class="col-xs-4">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let kebab of kebabs">
+          <a [routerLink]="['/kebabs',kebab.id, kebab.name]"
+          [queryParams]="{price: kebab.price}"
+          fragment="pic">{{kebab.name}}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
