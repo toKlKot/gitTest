@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {KebabPageComponent} from './kebab-page/kebab-page.component';
 import {HomePageComponent} from './home-page/home-page.component';
-import {InfoKebabPageComponent} from './info-kebab-page/info-kebab-page.component';
+import {InfoKebabPageComponent} from './kebab-page/info-kebab-page/info-kebab-page.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 
 

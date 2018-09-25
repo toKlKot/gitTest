@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {KebabService} from '../kebab.service';
-import {Kebab} from '../kebab';
+import {KebabService} from './services/kebab.service';
+import {Kebab} from './interface/kebab';
 import {divTrigger} from './kebab.animations';
 
 

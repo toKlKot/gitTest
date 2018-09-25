@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {Kebab} from '../kebab';
-import {KebabService} from '../kebab.service';
-import {divTrigger} from '../kebab-page/kebab.animations';
+import {Kebab} from '../interface/kebab';
+import {KebabService} from '../services/kebab.service';
+import {divTrigger} from '../kebab.animations';
 
 @Component({
   selector: 'app-info-kebab-page',
@@ -49,7 +49,7 @@ export class InfoKebabPageComponent implements OnInit {
   }
   removeKebab(id) {
     this.kebabService.deleteKebab(id).subscribe((data) => {
-      
+
     });
   }
 }
