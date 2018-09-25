@@ -8,12 +8,10 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
   }
-
-  openKebabPage() {
-    this.router.navigate(['kebabs'], {relativeTo: this.route });
-  }
 }
+

@@ -1,22 +1,26 @@
-<div class="container">
-  <h2>Kebab page</h2>
+<h2>Kebab page</h2>
+<button class="btn btn-primary dropdown-toggle" (click)="isVisible = !isVisible">Kebab create</button>
+  <div [@divTrigger]="'show'" *ngIf="isVisible">
   <input type="text" class="form-control" [(ngModel)]="kebabName" >
   <input type="text" class="form-control" [(ngModel)]="kebabPrice" >
   <button class="btn btn-success" (click)="addKebab()">Add kebab</button>
+
+  </div>
 <hr>
   <div class="row">
-    <div class="col-xs-4">
+    <div class="col-xs-4 col-xs-offset-1">
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let kebab of kebabs">
           <a [routerLink]="['/kebabs',kebab.id, kebab.name]"
           [queryParams]="{price: kebab.price}"
           fragment="pic">{{kebab.name}}
           </a>
+
         </li>
       </ul>
     </div>
-    <div class="col-xs-8">
+    <div class="col-xs-6 col-xs-offset-1">
       <router-outlet></router-outlet>
     </div>
   </div>
-</div>
+

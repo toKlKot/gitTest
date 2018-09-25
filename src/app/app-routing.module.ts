@@ -9,7 +9,7 @@ import {NotFoundComponent} from './not-found/not-found.component';
 
 const appRoutes: Routes = [
   {path:'kebabs',component: KebabPageComponent, children: [
-      {path:':id/:name',component: InfoKebabPageComponent},
+      {path:':id/:name',component: InfoKebabPageComponent}
     ]},
   {path:'',component: HomePageComponent},
   {path:'**', component:NotFoundComponent}

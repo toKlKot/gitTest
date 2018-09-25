@@ -1,4 +1,12 @@
-<h3>Id: {{id}}</h3>
+
 <h3>Kebab name:{{name}}</h3>
 <h3>Price:{{price}}</h3>
 <p>{{hash}}</p>
+<button class="btn btn-info" (click)="isHide = !isHide">Change kebab</button>
+<button class="btn btn-danger" (click)="removeKebab(id)">Remove kebab</button>
+<div [@divTrigger]="'show'" *ngIf="isHide">
+  <input type="text" class="form-control" [(ngModel)]="name" >
+  <input type="text" class="form-control" [(ngModel)]="price" >
+  <button class="btn btn-success" (click)="changeKebab(id)">submit</button>
+
+</div>
