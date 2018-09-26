@@ -1,8 +1,8 @@
 <h2>Kebab page</h2>
 <button class="btn btn-primary dropdown-toggle" (click)="isVisible = !isVisible">Kebab create</button>
   <div [@divTrigger]="'show'" *ngIf="isVisible">
-  <input type="text" class="form-control" [(ngModel)]="kebabName" >
-  <input type="text" class="form-control" [(ngModel)]="kebabPrice" >
+  <input type="text" class="form-control" [(ngModel)]="kebabName" placeholder="name" >
+  <input type="text" class="form-control" [(ngModel)]="kebabPrice" placeholder="0" >
   <button class="btn btn-success" (click)="addKebab()">Add kebab</button>
 
   </div>
@@ -15,12 +15,11 @@
           [queryParams]="{price: kebab.price}"
           fragment="pic">{{kebab.name}}
           </a>
-
         </li>
       </ul>
     </div>
     <div class="col-xs-6 col-xs-offset-1">
-      <router-outlet></router-outlet>
+      <router-outlet (updateKebab)="$event"></router-outlet>
     </div>
   </div>
 

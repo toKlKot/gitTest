@@ -12,11 +12,16 @@ import {divTrigger} from './kebab.animations';
 })
 export class KebabPageComponent implements OnInit {
 
+
+
   isVisible = false;
 
-  kebabs: Kebab[];
+  kebabs: Kebab[] = [];
   kebabName: string;
   kebabPrice: string;
+  id:number;
+  name: string;
+  price: number;
 
   constructor(private kebabService: KebabService) {}
 
@@ -26,6 +31,7 @@ export class KebabPageComponent implements OnInit {
     this.kebabService.getKebabs().subscribe((data: Kebab[]) => {
       this.kebabs = data;
     });
+
   }
   addKebab() {
     this.kebabService.addKebab(this.kebabName, this.kebabPrice).subscribe((data) => {
@@ -33,7 +39,7 @@ export class KebabPageComponent implements OnInit {
     });
     this.kebabName = '';
     this.kebabPrice = '';
-
   }
+
 
 }

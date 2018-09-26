@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {Kebab} from '../interface/kebab';
 import {KebabService} from '../services/kebab.service';
 import {divTrigger} from '../kebab.animations';
+import {Kebab} from '../interface/kebab';
+import {KebabPageComponent} from '../kebab-page.component';
+
 
 @Component({
   selector: 'app-info-kebab-page',
@@ -12,19 +14,18 @@ import {divTrigger} from '../kebab.animations';
 })
 export class InfoKebabPageComponent implements OnInit {
 
-  id:string;
+  id:number;
   name: string;
-  price: string;
+  price: number;
   hash: string;
 
 
   isHide = false;
 
 
-  kebabs: Kebab[];
+  kebabs: Kebab[] = [];
 
-
-  constructor(private route: ActivatedRoute, private kebabService: KebabService) { }
+  constructor(private route: ActivatedRoute, private kebabService: KebabService, private compNg1: KebabPageComponent) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
@@ -33,7 +34,9 @@ export class InfoKebabPageComponent implements OnInit {
     this.hash = this.route.snapshot.fragment;
 
     this.route.params.subscribe((params: Params) => {
-
+      this.id = params['id'];
+    });
+    this.route.params.subscribe((params: Params) => {
       this.name = params['name'];
     });
     this.route.queryParams.subscribe((params: Params) => {
@@ -42,14 +45,17 @@ export class InfoKebabPageComponent implements OnInit {
   }
 
   changeKebab(id) {
-    this.kebabService.changeKebab(id, this.name, this.price).subscribe((data) => {
+    this.kebabService.changeKebab(this.id,this.name, this.price).subscribe((data) => {
+      this.kebabs.push(data);
+      this.compNg1.ngOnInit();
 
     });
     this.isHide = false;
   }
-  removeKebab(id) {
-    this.kebabService.deleteKebab(id).subscribe((data) => {
-
+  removeKebab() {
+    this.kebabService.deleteKebab(this.id).subscribe((data) => {
+      this.compNg1.ngOnInit();
+      this.ngOnInit();
     });
   }
 }

@@ -24,8 +24,9 @@ export class KebabService {
         return data;
       }));
     }
-    changeKebab(id, name, price) {
+    changeKebab(id:number, name:string, price:number) {
     const data = {
+      id: id,
       name: name,
       price: price
     };
