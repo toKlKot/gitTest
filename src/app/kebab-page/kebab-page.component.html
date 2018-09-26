@@ -1,9 +1,10 @@
 <h2>Kebab page</h2>
 <button class="btn btn-primary dropdown-toggle" (click)="isVisible = !isVisible">Kebab create</button>
   <div [@divTrigger]="'show'" *ngIf="isVisible">
-  <input type="text" class="form-control" [(ngModel)]="kebabName" placeholder="name" >
-  <input type="text" class="form-control" [(ngModel)]="kebabPrice" placeholder="0" >
-  <button class="btn btn-success" (click)="addKebab()">Add kebab</button>
+
+    <input type="text" class="form-control" [(ngModel)]="kebabName" placeholder="Назва кебабу" autofocus>
+    <input type="text" class="form-control" [(ngModel)]="kebabPrice" placeholder="Ціна кебабу" >
+    <button class="btn btn-success" (click)="addKebab()">Add kebab</button>
 
   </div>
 <hr>
@@ -19,7 +20,7 @@
       </ul>
     </div>
     <div class="col-xs-6 col-xs-offset-1">
-      <router-outlet (updateKebab)="$event"></router-outlet>
+      <router-outlet></router-outlet>
     </div>
   </div>
 

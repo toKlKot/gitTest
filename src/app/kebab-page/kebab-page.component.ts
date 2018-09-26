@@ -19,9 +19,6 @@ export class KebabPageComponent implements OnInit {
   kebabs: Kebab[] = [];
   kebabName: string;
   kebabPrice: string;
-  id:number;
-  name: string;
-  price: number;
 
   constructor(private kebabService: KebabService) {}
 

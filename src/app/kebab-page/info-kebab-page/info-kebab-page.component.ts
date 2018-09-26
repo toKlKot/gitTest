@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Params} from '@angular/router';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 import {KebabService} from '../services/kebab.service';
 import {divTrigger} from '../kebab.animations';
 import {Kebab} from '../interface/kebab';
@@ -14,6 +14,7 @@ import {KebabPageComponent} from '../kebab-page.component';
 })
 export class InfoKebabPageComponent implements OnInit {
 
+  siteUrl = '/kebabs';
   id:number;
   name: string;
   price: number;
@@ -52,10 +53,10 @@ export class InfoKebabPageComponent implements OnInit {
     });
     this.isHide = false;
   }
-  removeKebab() {
+  removeKebab(id) {
     this.kebabService.deleteKebab(this.id).subscribe((data) => {
       this.compNg1.ngOnInit();
-      this.ngOnInit();
+
     });
   }
 }

@@ -12,7 +12,8 @@ const appRoutes: Routes = [
       {path:':id/:name',component: InfoKebabPageComponent}
     ]},
   {path:'',component: HomePageComponent},
-  {path:'**', component:NotFoundComponent}
+  {path:'not-found', component:NotFoundComponent},
+  {path:'**', redirectTo: '/kebabs'}
 ];
 
 @NgModule({
