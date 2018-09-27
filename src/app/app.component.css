@@ -1,0 +1,35 @@
+.menuBlock {
+  padding-top: 40px;
+}
+.header {
+  background: #343A40;
+  min-height: 100px;
+}
+.footer {
+  height: 100%;
+  width: 100%;
+  background: #343A40;
+}
+.info {
+  min-height: 100px;
+  min-width: 480px;
+  float: left;
+  margin: 30px 0 30px 20px;
+}
+.gMap {
+  min-height: 300px;
+  min-width: 480px;
+  float: left;
+  margin: 30px 0 30px 82px;
+}
+
+.infoText {
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 20px;
+}
+.infoSpan {
+  margin-top: 80px;
+}

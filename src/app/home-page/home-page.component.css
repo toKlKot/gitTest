@@ -1,0 +1,11 @@
+.kebabMenu {
+  min-height: 100px;
+  width: 100%;
+}
+
+.kebab {
+  display: inline;
+  height: 200px;
+  width: 250px;
+  float: left;
+}

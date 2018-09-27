@@ -12,7 +12,7 @@ import { KebabPageComponent } from './kebab-page/kebab-page.component';
 import {AppRoutingModule} from './app-routing.module';
 import { InfoKebabPageComponent } from './kebab-page/info-kebab-page/info-kebab-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { SigninComponent } from './signin/signin.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 
@@ -24,7 +24,7 @@ import { SigninComponent } from './signin/signin.component';
     KebabPageComponent,
     InfoKebabPageComponent,
     NotFoundComponent,
-    SigninComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Params, Router} from '@angular/router';
+import {ActivatedRoute, Params} from '@angular/router';
 import {KebabService} from '../services/kebab.service';
 import {divTrigger} from '../kebab.animations';
 import {Kebab} from '../interface/kebab';
@@ -14,7 +14,6 @@ import {KebabPageComponent} from '../kebab-page.component';
 })
 export class InfoKebabPageComponent implements OnInit {
 
-  siteUrl = '/kebabs';
   id:number;
   name: string;
   price: number;
@@ -32,7 +31,6 @@ export class InfoKebabPageComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.name = this.route.snapshot.params['name'];
     this.price = this.route.snapshot.queryParams['price'];
-    this.hash = this.route.snapshot.fragment;
 
     this.route.params.subscribe((params: Params) => {
       this.id = params['id'];
