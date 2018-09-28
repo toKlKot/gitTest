@@ -3,27 +3,32 @@
     {
       "name": "Chicken",
       "price": "35",
-      "id": 1
+      "id": 1,
+      "img": "assets/img/chicken.jpg"
     },
     {
       "name": "Veal",
       "price": "50",
-      "id": 2
+      "id": 2,
+      "img": "assets/img/veal.png"
     },
     {
       "name": "Crab",
       "price": "55",
-      "id": 3
+      "id": 3,
+      "img": "assets/img/crab.jpg"
     },
     {
       "name": "Shrimp",
       "price": "35",
-      "id": 4
+      "id": 4,
+      "img": "assets/img/shrimp.jpg"
     },
     {
       "id": 5,
       "name": "Фалафель",
-      "price": "35"
+      "price": "35",
+      "img": "assets/img/falafel.jpg"
     }
   ]
 }

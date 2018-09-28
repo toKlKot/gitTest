@@ -1,20 +1,30 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 kebabMenu">
-      <ul>
-        <li class="list-group-item kebab" *ngFor="let kebab of kebabs">
-          <a [routerLink]="['/kebabs',kebab.id, kebab.name]"
-             [queryParams]="{price: kebab.price}"
-             fragment="pic">{{kebab.name}}
-          </a>
-        </li>
-      </ul>
-    </div>
+      <div class="prev"><a (click)="getPrev()"></a></div>
+        <div class ="slider">
+          <ul>
+            <li class="kebab" *ngFor="let kebab of kebabs">
+              <a class="decorLink" [routerLink]="['/kebabs',kebab.id, kebab.name]"
+                 [queryParams]="{price: kebab.price}">
+                <img src="{{kebab.img}}" style="height: 180px;width: 180px">
+                <p>{{kebab.name}}</p>
+                <p>{{kebab.price | currency }}</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      <div class="next"><a (click)="getNext()"></a></div>
+</div>
   </div>
 </div>
 <hr>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12"></div>
+    <div class="col-xs-12 insta">
+      <iframe src="//widget.instagramm.ru/?imageW=10&imageH=10&thumbnail_size=69&type=0&typetext=rivne_doner&head_show=1&profile_show=1&
+      shadow_show=1&bg=255,255,255,1&opacity=true&head_bg=46729b&subscribe_bg=ad4141&border_color=c3c3c3&head_title=rivne-doner"
+              allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:800px;height:281px;"></iframe>
+    </div>
   </div>
 </div>

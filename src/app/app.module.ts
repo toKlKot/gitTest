@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { NguCarouselModule } from '@ngu/carousel';
 
 import { AppComponent } from './app.component';
 import {KebabService} from './kebab-page/services/kebab.service';
@@ -31,7 +31,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NguCarouselModule
   ],
   providers: [KebabService],
   bootstrap: [AppComponent]

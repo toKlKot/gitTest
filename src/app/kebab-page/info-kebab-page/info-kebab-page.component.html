@@ -1,6 +1,7 @@
-<h3>Kebab name:{{name}}</h3>
-<h3>Price:{{price}}</h3>
-<p>{{hash}}</p>
+<img src="{{img}}" style="height: 180px;width: 180px">
+<h3>{{name}}</h3>
+<h3>{{price | currency}}</h3>
+
 <button class="btn btn-info" (click)="isHide = !isHide">Change kebab</button>
 <button class="btn btn-danger" (click)="removeKebab(id)" [routerLink]="'/kebabs'">Remove kebab</button>
 <div [@divTrigger]="'show'" *ngIf="isHide">

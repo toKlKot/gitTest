@@ -17,7 +17,7 @@ export class InfoKebabPageComponent implements OnInit {
   id:number;
   name: string;
   price: number;
-  hash: string;
+  img: string;
 
 
   isHide = false;
@@ -44,7 +44,7 @@ export class InfoKebabPageComponent implements OnInit {
   }
 
   changeKebab(id) {
-    this.kebabService.changeKebab(this.id,this.name, this.price).subscribe((data) => {
+    this.kebabService.changeKebab(this.id, this.name, this.price).subscribe((data) => {
       this.kebabs.push(data);
       this.compNg1.ngOnInit();
 

@@ -5,7 +5,65 @@
 
 .kebab {
   display: inline;
-  height: 200px;
-  width: 250px;
+  height: 250px;
+  width: 200px;
   float: left;
+  margin-top: 27px;
+}
+.kebab:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.decorLink {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+.prev a {
+  background: url("../../assets/img/if_nav-arrow-left_383101.png");
+  height: 48px;
+  width: 27px;
+  margin: 112px 0 0 0;
+  float: left;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.prev :hover{
+  opacity: 0.9;
+}
+.next a {
+  background-image: url("../../assets/img/if_nav-arrow-right_383100.png");
+  height: 48px;
+  width: 27px;
+  margin: 112px 0 0 0;
+  float: right;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.next :hover{
+  opacity: 0.9;
+}
+.slider{
+  overflow: hidden;
+  height: 303px;
+  width: 90%;
+  float: left;
+}
+
+.slider ul {
+
+  width: 1500px;
+  height: 303px;
+  display: block;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+}
+.insta {
+  margin-left: 173px;
 }
