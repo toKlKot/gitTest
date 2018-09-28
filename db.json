@@ -29,6 +29,24 @@
       "name": "Фалафель",
       "price": "35",
       "img": "assets/img/falafel.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Кебаб меню",
+      "price": "55",
+      "img": "assets/img/kebabMenu.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Тарілка на двох",
+      "price": "35",
+      "img": "assets/img/plateoftwo.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Креветки бокс",
+      "price": "58",
+      "img": "assets/img/shrimp-plate.jpg"
     }
   ]
 }

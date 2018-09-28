@@ -1,6 +1,6 @@
 
 <h3>{{name}}</h3>
-<h3>{{price | currency}}</h3>
+<h3>{{price | currency: 'UAH'}}</h3>
 
 <button class="btn btn-info" (click)="isHide = !isHide">Change kebab</button>
 <button class="btn btn-danger" (click)="removeKebab(id)" [routerLink]="'/kebabs'">Remove kebab</button>
