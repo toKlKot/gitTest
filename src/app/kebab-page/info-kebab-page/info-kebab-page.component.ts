@@ -31,21 +31,21 @@ export class InfoKebabPageComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.name = this.route.snapshot.params['name'];
     this.price = this.route.snapshot.queryParams['price'];
+    this.img = this.route.snapshot.queryParams['img'];
 
     this.route.params.subscribe((params: Params) => {
       this.id = params['id'];
-    });
-    this.route.params.subscribe((params: Params) => {
       this.name = params['name'];
     });
     this.route.queryParams.subscribe((params: Params) => {
       this.price = params['price'];
+      this.img = params['img'];
     });
   }
 
   changeKebab(id) {
-    this.kebabService.changeKebab(this.id, this.name, this.price).subscribe((data) => {
-      this.kebabs.push(data);
+    this.kebabService.changeKebab(this.id, this.name, this.price, this.img).subscribe((data : Kebab[]) => {
+      this.kebabs = data;
       this.compNg1.ngOnInit();
 
     });

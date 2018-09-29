@@ -2,21 +2,34 @@
   padding: 5px;
   margin: 5px;
 }
-.decorLink {
-  text-decoration: none;
-  color: #000;
-  font-size: 20px;
+.kebab {
+  position: relative;
+
+  padding: 0;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.125);
 }
-.kebab a{
-  display: block;
-}
-.kebab a:hover{
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
+.kebab.active {
+  background-color: #17A2B8;
+  border: none;
   transform: scale(1.1);
 }
+.kebab .decorLink{
+  transform: scale(1.1);
+  color: #343A40;
+  text-decoration: none;
+  text-align: center;
+  padding: .75rem 1.25rem;
+  display: block;
+}
+.kebab .decorLink.active {
+  color: #ffffff;
+}
+
 .kebab:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.decorLink:hover {
   transform: scale(1.1);
 }

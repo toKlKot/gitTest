@@ -16,10 +16,11 @@
   <div class="row">
     <div class="col-xs-4 col-xs-offset-1">
       <ul class="list-group">
-        <li class="list-group-item kebab" *ngFor="let kebab of kebabs">
-          <a class="decorLink" [routerLink]="['/kebabs',kebab.id, kebab.name]"
-          [queryParams]="{price: kebab.price}"
-          >{{kebab.name}}
+        <li routerLinkActive="active" class="list-group-item kebab" *ngFor="let kebab of kebabs">
+          <a class="decorLink" routerLinkActive="active"
+            [routerLink]="['/kebabs',kebab.id, kebab.name]"
+            [queryParams]="{price: kebab.price, img: kebab.img}"
+            >{{kebab.name}}
           </a>
         </li>
       </ul>

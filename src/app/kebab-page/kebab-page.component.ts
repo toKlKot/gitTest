@@ -26,6 +26,7 @@ export class KebabPageComponent implements OnInit {
   ngOnInit() {
     this.kebabService.getKebabs().subscribe((data: Kebab[]) => {
       this.kebabs = data;
+
     });
 
   }

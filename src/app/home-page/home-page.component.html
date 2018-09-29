@@ -6,7 +6,7 @@
           <ul>
             <li class="kebab" *ngFor="let kebab of kebabs">
               <a class="decorLink" [routerLink]="['/kebabs',kebab.id, kebab.name]"
-                 [queryParams]="{price: kebab.price}">
+                 [queryParams]="{price: kebab.price, img: kebab.img}">
                 <img src="{{kebab.img}}" style="height: 180px;width: 180px">
                 <p>{{kebab.name}}</p>
                 <p>{{kebab.price | currency: 'UAH'}}</p>

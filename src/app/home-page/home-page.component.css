@@ -4,15 +4,12 @@
 }
 
 .kebab {
-  display: inline;
   height: 250px;
   width: 200px;
   float: left;
   margin-top: 27px;
 }
 .kebab:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 

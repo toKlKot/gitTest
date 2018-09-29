@@ -24,11 +24,12 @@ export class KebabService {
         return data;
       }));
     }
-    changeKebab(id:number, name:string, price:number) {
+    changeKebab(id:number, name:string, price:number, img: string) {
     const data = {
       id: id,
       name: name,
-      price: price
+      price: price,
+      img: img
     };
     return this.http.put('http://localhost:3000/kebabList/'+ id, data).pipe(map(data => {
       return data;
