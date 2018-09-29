@@ -1,12 +1,13 @@
+<div class="imgKebab"><img src="{{img}}" style="height: 280px;width: 280px"/></div>
+<div class="changeKebab">
+  <h3>{{name}}</h3>
+  <h3>{{price | currency: 'UAH'}}</h3>
 
-<h3>{{name}}</h3>
-<h3>{{price | currency: 'UAH'}}</h3>
-
-<button class="btn btn-info" (click)="isHide = !isHide">Change kebab</button>
-<button class="btn btn-danger" (click)="removeKebab(id)" [routerLink]="'/kebabs'">Remove kebab</button>
-<div [@divTrigger]="'show'" *ngIf="isHide">
-  <input type="text" class="form-control" [(ngModel)]="name" placeholder="Назва кебабу" autofocus>
-  <input type="text" class="form-control" [(ngModel)]="price" placeholder="Ціна кебабу">
-  <button class="btn btn-success" (click)="changeKebab(id)">submit</button>
-
+  <button class="btn btn-info" (click)="isHide = !isHide">Change kebab</button>
+  <button class="btn btn-danger btnKebab" (click)="removeKebab(id)" [routerLink]="'/kebabs'">Remove kebab</button>
+  <div [@divTrigger]="'show'" *ngIf="isHide">
+    <input type="text" class="form-control" [(ngModel)]="name" placeholder="Назва кебабу" autofocus>
+    <input type="text" class="form-control" [(ngModel)]="price" placeholder="Ціна кебабу">
+    <button class="btn btn-success" (click)="changeKebab(id)">submit</button>
+  </div>
 </div>

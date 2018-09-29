@@ -17,6 +17,7 @@ export class InfoKebabPageComponent implements OnInit {
   id:number;
   name: string;
   price: number;
+  img:string;
 
 
   isHide = false;

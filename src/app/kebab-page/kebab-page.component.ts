@@ -13,7 +13,6 @@ import {divTrigger} from './kebab.animations';
 export class KebabPageComponent implements OnInit {
 
 
-
   isVisible = false;
 
   kebabs: Kebab[] = [];

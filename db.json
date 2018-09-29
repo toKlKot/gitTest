@@ -47,6 +47,11 @@
       "name": "Креветки бокс",
       "price": "58",
       "img": "assets/img/shrimp-plate.jpg"
+    },
+    {
+      "name": "dfgdf",
+      "price": "33",
+      "id": 9
     }
   ]
 }

@@ -1,0 +1,22 @@
+.form-control {
+  padding: 5px;
+  margin: 5px;
+}
+.decorLink {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+.kebab a{
+  display: block;
+}
+.kebab a:hover{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.kebab:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
