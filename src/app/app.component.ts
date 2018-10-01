@@ -12,11 +12,13 @@ export class AppComponent {
 
   kebabs: Kebab[] = [];
 
-  constructor(private kebabService: KebabService) {}
+  constructor(private kebabService: KebabService) {
+  }
 
   ngOnInit() {
     this.kebabService.getKebabs().subscribe((data: Kebab[]) => {
       this.kebabs = data;
 
     });
+  }
 }
